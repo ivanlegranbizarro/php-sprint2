@@ -26,3 +26,12 @@ SELECT nombre, ROUND(precio) from tienda.producto;
 SELECT nombre, precio from tienda.producto;
 
 SELECT nombre, TRUNCATE (precio, 0) from tienda.producto;
+
+SELECT DISTINCT
+    fabricante.codigo
+FROM fabricante
+    INNER JOIN producto ON fabricante.codigo = producto.codigo_fabricante;
+
+SELECT nombre from fabricante ORDER BY 'ASC';
+
+SELECT nombre from fabricante ORDER BY 'DESC';
