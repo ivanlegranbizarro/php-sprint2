@@ -97,3 +97,11 @@ SELECT p.apellido1, p.apellido2, p.nombre, d.nombre AS nombre_departamento FROM 
 SELECT asignatura.nombre, curso_escolar.anyo_inicio, curso_escolar.anyo_fin from universidad.alumno_se_matricula_asignatura inner join asignatura on asignatura.id = id_asignatura inner join persona on persona.id = id_alumno inner join curso_escolar on curso_escolar.id = id_curso_escolar where persona.nif = '26902806M';
 SELECT DISTINCT d.nombre FROM departamento d INNER JOIN profesor p ON d.id = p.id_departamento INNER JOIN asignatura a ON p.id_profesor = a.id_profesor INNER JOIN grado g ON a.id_grado = g.id WHERE g.nombre = 'Grado en Ingeniería Informática (Plan 2015)';
 SELECT DISTINCT nombre, apellido1, apellido2 from universidad.alumno_se_matricula_asignatura inner join persona on persona.id = id_alumno inner join curso_escolar on curso_escolar.id = id_curso_escolar where anyo_inicio = 2018 and anyo_fin = 2019;
+
+
+SELECT departamento.nombre, persona.apellido1, persona.apellido2, persona.nombre from universidad.profesor left join persona on persona.id = id_profesor left join departamento on id_departamento = departamento.id order by departamento.nombre, persona.apellido1, persona.apellido2, persona.nombre;
+select persona.nombre, persona.apellido1, persona.apellido2, departamento.nombre AS nombre_departamento from universidad.persona left join profesor on persona.id = id_profesor left join departamento on id_departamento = departamento.id where id_departamento is null order by persona.apellido1, persona.apellido2, persona.nombre;
+SELECT departamento.nombre from universidad.departamento left join profesor on id = id_profesor where id_profesor is null;
+SELECT persona.nombre, persona.apellido1, persona.apellido2 FROM universidad.persona LEFT JOIN profesor ON persona.id = profesor.id_profesor LEFT JOIN asignatura ON profesor.id_profesor = asignatura.id_profesor WHERE profesor.id_profesor IS NULL;
+SELECT asignatura.nombre from universidad.asignatura left join persona on id_profesor = persona.id where id_profesor is null;
+SELECT departamento.nombre FROM universidad.departamento LEFT JOIN profesor ON departamento.id = profesor.id_departamento LEFT JOIN asignatura ON profesor.id_profesor = asignatura.id_profesor WHERE profesor.id_profesor IS NULL;
