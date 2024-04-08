@@ -118,7 +118,6 @@ SELECT asignatura.nombre from universidad.asignatura left join persona on id_pro
 SELECT departamento.nombre FROM universidad.departamento LEFT JOIN profesor ON departamento.id = profesor.id_departamento LEFT JOIN asignatura ON profesor.id_profesor = asignatura.id_profesor WHERE profesor.id_profesor IS NULL;
 
 SELECT count(persona.id) from universidad.persona where persona.tipo = 'alumno';
--- Calcula quants/es alumnes van néixer en 1999.
 
 SELECT count(persona.id) from universidad.persona where persona.tipo = 'alumno' and persona.fecha_nacimiento between '1999-01-01' and '1999-12-31';
 
