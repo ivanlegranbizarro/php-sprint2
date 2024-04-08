@@ -105,3 +105,17 @@ SELECT departamento.nombre from universidad.departamento left join profesor on i
 SELECT persona.nombre, persona.apellido1, persona.apellido2 FROM universidad.persona LEFT JOIN profesor ON persona.id = profesor.id_profesor LEFT JOIN asignatura ON profesor.id_profesor = asignatura.id_profesor WHERE profesor.id_profesor IS NULL;
 SELECT asignatura.nombre from universidad.asignatura left join persona on id_profesor = persona.id where id_profesor is null;
 SELECT departamento.nombre FROM universidad.departamento LEFT JOIN profesor ON departamento.id = profesor.id_departamento LEFT JOIN asignatura ON profesor.id_profesor = asignatura.id_profesor WHERE profesor.id_profesor IS NULL;
+
+SELECT count(persona.id) from universidad.persona where persona.tipo = 'alumno';
+-- Calcula quants/es alumnes van néixer en 1999.
+SELECT count(persona.id) from universidad.persona where persona.tipo = 'alumno' and persona.fecha_nacimiento between '1999-01-01' and '1999-12-31';
+SELECT departamento.nombre, COUNT(*) as cantidad_profesores FROM universidad.departamento INNER JOIN profesor ON departamento.id = profesor.id_departamento GROUP BY departamento.nombre ORDER BY cantidad_profesores DESC;
+SELECT departamento.nombre, COUNT(*) as cantidad_profesores FROM universidad.departamento LEFT JOIN profesor ON departamento.id = profesor.id_departamento GROUP BY departamento.nombre;
+SELECT grado.nombre, COUNT(*) as cantidad_asignaturas FROM universidad.grado LEFT JOIN asignatura ON grado.id = asignatura.id_grado GROUP BY grado.nombre ORDER BY cantidad_asignaturas DESC;
+SELECT grado.nombre, COUNT(*) as cantidad_asignaturas FROM universidad.grado LEFT JOIN asignatura ON grado.id = asignatura.id_grado GROUP BY grado.nombre HAVING COUNT(*) > 40;
+SELECT grado.nombre, asignatura.tipo, SUM(asignatura.creditos) as total_creditos FROM universidad.grado INNER JOIN asignatura ON grado.id = asignatura.id_grado GROUP BY grado.nombre, asignatura.tipo;
+SELECT curso_escolar.anyo_inicio, COUNT(*) as cantidad_alumnos FROM universidad.alumno_se_matricula_asignatura INNER JOIN curso_escolar ON curso_escolar.id = id_curso_escolar GROUP BY anyo_inicio;
+SELECT persona.id, persona.nombre, persona.apellido1,  persona.apellido2, COUNT(asignatura.id) AS cantidad_asignaturas FROM universidad.persona LEFT JOIN profesor ON persona.id = profesor.id_profesor LEFT JOIN asignatura ON profesor.id_profesor = asignatura.id_profesor GROUP BY persona.id ORDER BY cantidad_asignaturas DESC;
+
+SELECT * FROM universidad.persona WHERE tipo = 'alumno' ORDER BY fecha_nacimiento DESC LIMIT 1;
+SELECT persona.nombre, persona.apellido1, persona.apellido2 FROM universidad.persona LEFT JOIN profesor ON persona.id = profesor.id_profesor LEFT JOIN asignatura ON profesor.id_profesor = asignatura.id_profesor WHERE asignatura.id_profesor IS NULL;
