@@ -1,4 +1,16 @@
-use tienda;
+DROP DATABASE IF EXISTS tienda;
+
+CREATE DATABASE tienda CHARACTER SET utf8mb4;
+
+USE tienda;
+
+CREATE TABLE fabricante (
+    codigo INT UNSIGNED AUTO_INCREMENT PRIMARY KEY, nombre VARCHAR(100) NOT NULL
+);
+
+CREATE TABLE producto (
+    codigo INT UNSIGNED AUTO_INCREMENT PRIMARY KEY, nombre VARCHAR(100) NOT NULL, precio DOUBLE NOT NULL, codigo_fabricante INT UNSIGNED NOT NULL, FOREIGN KEY (codigo_fabricante) REFERENCES fabricante (codigo)
+);
 
 -- Llista el nom de tots els productes que hi ha en la taula "producto".
 SELECT nombre from tienda.producto;
@@ -33,10 +45,12 @@ SELECT nombre, ROUND(precio) from tienda.producto;
 
 -- Llista els noms i els preus de tots els productes de la taula "producto", truncant el valor del preu per a mostrar-lo sense cap xifra decimal.
 SELECT nombre, TRUNCATE (precio, 0) from tienda.producto;
+
 -- Llista el codi dels fabricants que tenen productes en la taula "producto".
 SELECT fabricante.codigo
 FROM fabricante
     INNER JOIN producto ON fabricante.codigo = producto.codigo_fabricante;
+
 -- Llista el codi dels fabricants que tenen productes en la taula "producto", eliminant els codis que apareixen repetits.
 SELECT DISTINCT
     fabricante.codigo
