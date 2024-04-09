@@ -38,7 +38,6 @@ id_client_recomanador INT,
 FOREIGN KEY (id_client_recomanador) REFERENCES client(id_client)
 );
 
-
 CREATE TABLE ulleres(
 id_ulleres INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
 graduacio_esquerra FLOAT NOT NULL,
@@ -48,10 +47,11 @@ color_muntura VARCHAR(50) NOT NULL,
 color_vidre_esquerre VARCHAR(50) NOT NULL,
 color_vidre_dret VARCHAR(50) NOT NULL,
 preu FLOAT NOT NULL,
+fecha_venta TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
 id_proveidor_compra INT NOT NULL,
-FOREIGN KEY (id_proveidor_compra) REFERENCES proveidor(id_proveidor)
+FOREIGN KEY (id_proveidor_compra) REFERENCES proveidor(id_proveidor),
 id_venedor INT NOT NULL,
-FOREIGN KEY (id_venedor) REFERENCES empleat(id_empleat)
+FOREIGN KEY (id_venedor) REFERENCES empleat(id_empleat),
 id_comprador INT NOT NULL,
 FOREIGN KEY (id_comprador) REFERENCES client(id_client)
 );
