@@ -61,5 +61,6 @@ FOREIGN KEY (id_venta_client) REFERENCES client(id_client),
 id_venta_ulleres INT NOT NULL,
 FOREIGN KEY (id_venta_ulleres) REFERENCES ulleres(id_ulleres),
 id_venta_empleat INT NOT NULL,
-FOREIGN KEY (id_venta_empleat) REFERENCES empleat(id_empleat)
+FOREIGN KEY (id_venta_empleat) REFERENCES empleat(id_empleat),
+quantitat INT DEFAULT 1
 );
