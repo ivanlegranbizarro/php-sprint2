@@ -5,6 +5,8 @@ CREATE DATABASE optica DEFAULT CHARACTER
 SET
   = 'utf8mb4';
 
+USE optica;
+
 CREATE TABLE
   adreça (
     id_adreça INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
@@ -57,7 +59,7 @@ CREATE TABLE
     color_vidre_dret VARCHAR(50) NOT NULL,
     preu FLOAT NOT NULL,
     id_ulleres_proveidor INT NOT NULL,
-    FOREIGN KEY (id_ulleres_proveidor) REFERENCES proveidor (id_proveidor),
+    FOREIGN KEY (id_ulleres_proveidor) REFERENCES proveidor (id_proveidor)
   );
 
 CREATE TABLE
