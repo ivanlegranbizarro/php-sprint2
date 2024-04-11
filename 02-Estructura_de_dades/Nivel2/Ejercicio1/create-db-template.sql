@@ -1,0 +1,8 @@
+-- Active: 1712067878421@@127.0.0.1@3306
+DROP DATABASE IF EXISTS youtube;
+
+CREATE DATABASE youtube DEFAULT CHARACTER
+SET
+  = 'utf8mb4';
+
+use youtube;
