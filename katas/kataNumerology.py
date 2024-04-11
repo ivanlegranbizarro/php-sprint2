@@ -68,8 +68,6 @@ def procesar_numero (num: int) -> str:
             return "Generositat"
 
 
-
-
 array_numero_1= [1,3]
 array_numero_2= [1,7,2]
 
