@@ -1,12 +1,12 @@
 <?php
 
-function convertir_num_a_array($num)
+function convertir_num_a_array(int $num): array
 {
   $array = array_map('intval', str_split($num));
   return $array;
 }
 
-function sumar_array($array)
+function sumar_array(array $array): int
 {
   $calculo = array_sum($array);
   if ($calculo > 9) {
@@ -15,7 +15,7 @@ function sumar_array($array)
   return $calculo;
 }
 
-function procesar_numero($num)
+function procesar_numero(int $num): string
 {
   $array_numero = convertir_num_a_array($num);
   $reduccion = sumar_array($array_numero);
