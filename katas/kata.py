@@ -38,7 +38,7 @@ def convertir_num_a_array(num: int) -> list:
 def sumar_array(array: list) -> int:
   calculo= sum(array)
   if calculo > 9:
-    return str(calculo)[0]
+    return int(str(calculo)[0])
   return calculo
 
 def procesar_numero (num: int) -> str:
@@ -73,4 +73,4 @@ array_numero_1= [1,3]
 array_numero_2= [1,7,2]
 
 
-print(procesar_numero(123))
+print(procesar_numero(172))
