@@ -36,7 +36,7 @@ def convertir_num_a_array(num: int) -> list:
 
 
 def sumar_array(array: list) -> int:
-  calculo= sum(array)
+  calculo = sum(array)
   if calculo > 9:
     return int(str(calculo)[0])
   return calculo
@@ -66,6 +66,7 @@ def procesar_numero (num: int) -> str:
             return "Poder"
         case 9:
             return "Generositat"
+
 
 
 
