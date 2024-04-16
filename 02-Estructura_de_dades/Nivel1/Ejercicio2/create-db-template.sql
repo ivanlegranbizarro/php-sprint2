@@ -95,6 +95,7 @@ CREATE TABLE
     id_detall_comanda INT NOT NULL,
     id_detall_producte INT NOT NULL,
     quantitat INT DEFAULT 1,
+    preu_total FLOAT,
     FOREIGN KEY (id_detall_comanda) REFERENCES comanda (id_comanda),
     FOREIGN KEY (id_detall_producte) REFERENCES producte (id_producte)
   );
