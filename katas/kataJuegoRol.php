@@ -28,6 +28,7 @@ class Jugador
   }
 
   public function pedirOrden(int $movimiento = 1)
+  //TODO Parametrizar los límites en la función movimiento para que no choquen con la suma de furiaBerseker
   {
     $instruccion = readline("Introduce la dirección hacia la que te quieres mover ('d' para derecha, 'i' para izquierda, 'a' para arriba, 'p' para abajo): ");
 
