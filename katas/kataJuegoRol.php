@@ -17,8 +17,9 @@ Finalment, els arquers tenen un arc (representat per un nom) i un nombre de flet
 
 
 
-class Jugador
+abstract class Jugador
 {
+
 
   public function __construct(
     public string $nickname,
@@ -78,8 +79,6 @@ class Guerrero extends Jugador
 
   public function __construct(
     public string $nickname,
-    public int $x = 0,
-    public int $y = 0,
     public string $armaDosManos
   ) {
   }
@@ -88,8 +87,15 @@ class Guerrero extends Jugador
   {
     $this->pedirOrden(2);
   }
+
+  public function __toString(): string
+  {
+    return "Este guerrero se llama $this->nickname";
+  }
 }
 
 class Mago extends Jugador
 {
 }
+
+echo $guerrero = new Guerrero('Pepe Hostias', 'Espadón');
