@@ -72,7 +72,6 @@ class Jugador
 }
 
 
-
 class Guerrero extends Jugador
 {
 
