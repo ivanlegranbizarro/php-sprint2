@@ -20,7 +20,6 @@ db.restaurants.find({$nor: [{borough: "Staten Island"}, {borough: "Queens"}, {bo
 db.restaurants.find({"grades.score": {$lt:10}}, {restaurant_id:1, name:1, borough:1, cuisine:1})
 db.restaurants.find({cuisine: "Seafood", $and: [{name: {$not: {$regex: /^Wil/}}}, {name: {$not: {$regex: /Chinese/i}}}, {name: {$not: {$regex: /American/i}}}]}, {restaurant_id: 1, name: 1, borough: 1, cuisine: 1})
 db.restaurants.find({"grades.grade":"A", "grades.score":{$eq:11}, "grades.date": new ISODate("2014-08-11T00:00:00Z")}, {restaurant_id:1, name:1, grades:1})
-//Escriu una consulta per trobar el restaurant_id, name i grades per a aquells restaurants on el 2n element de l'array de graus conté un grade de "A" i un score 9 amb un ISODate "2014-08-11T00:00:00Z".
 db.restaurants.find({"grades.1.grade":"A", "grades.score":{$eq:9}, "grades.date": new ISODate("2014-08-11T00:00:00Z")}, {restaurant_id:1, name:1, grades:1})
 db.restaurants.find({"address.coord.1": {$gte:42, $lte:52}}, {restaurant_id:1, name:1, address:1})
 db.restaurants.find().sort({name:1})
