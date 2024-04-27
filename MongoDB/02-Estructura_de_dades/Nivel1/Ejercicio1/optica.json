@@ -1,0 +1,45 @@
+{
+  "client": {
+    "_id": 1,
+    "nom": "Pepe Roberto Vázquez",
+    "adreça": {
+      "carrer": "De l' home sense ulleres S/N",
+      "cp": 80453,
+      "telefon": "93-567-67-54",
+      "email": "peperobertovázques@pepe.com",
+      "data_registre": "2024-04-26T12:00:00Z"
+    }
+  },
+  "ulleres": {
+    "marca": "Ray-Ban",
+    "graduacio_vidre_esquerre": "-1.25",
+    "graduacio_vidre_dret": "-1.50",
+    "tipus_muntura": "pasta",
+    "color_muntura": "negro",
+    "color_vidre_esquerre": "transparente",
+    "color_vidre_dret": "transparente",
+    "preu": 150,
+    "proveidor": {
+      "nom": "Proveidor S.A.",
+      "adreça": {
+        "carrer": "Gran Via",
+        "número": "12",
+        "pis": "3",
+        "porta": "B",
+        "ciutat": "Barcelona",
+        "codi_postal": "08001",
+        "pais": "España"
+      },
+      "telefon": "93-123-45-67",
+      "fax": "93-123-45-68",
+      "NIF": "B12345678"
+    },
+    "venta": {
+      "data": "2020-04-05T00:00:00Z",
+      "preu_total": 162,
+      "empleat": {
+        "nom": "Marisa la de la Repisa"
+      }
+    }
+  }
+}
