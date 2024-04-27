@@ -1,1 +1,1 @@
-Ejercicio de Estructuras de Datos, Sprint 2 PHP IT Academy
+Ejercicio de Queries con MongoDB, Sprint 2 PHP IT Academy
