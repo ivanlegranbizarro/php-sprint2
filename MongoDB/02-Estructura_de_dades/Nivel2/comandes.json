@@ -12,37 +12,31 @@
       }
     },
     "productes": {
-      "pizzes": {
-        "pizza": {
-          "_id": 1,
-          "nom": "Margarita",
-          "tamany": "mitja",
-          "ingredients": [
-            "tomàquet",
-            "formatge",
-            "julivert"
-          ],
-          "preu": 10,
-          "quantitat": 1
-        }
+      "pizza": {
+        "_id": 1,
+        "nom": "Margarita",
+        "tamany": "mitja",
+        "ingredients": [
+          "tomàquet",
+          "formatge",
+          "julivert"
+        ],
+        "preu": 10,
+        "quantitat": 1
       },
-      "hamburgueses": {
-        "hamburguesa": {
-          "_id": "-",
-          "nom": "-",
-          "format": "-",
-          "preu": 0,
-          "quantitat": 0
-        }
+      "hamburguesa": {
+        "_id": "-",
+        "nom": "-",
+        "format": "-",
+        "preu": 0,
+        "quantitat": 0
       },
-      "begudes": {
-        "beguda": {
-          "_id": 1,
-          "nom": "Voll-Damm",
-          "format": "Llauna",
-          "preu": 2,
-          "quantitat": 10
-        }
+      "beguda": {
+        "_id": 1,
+        "nom": "Voll-Damm",
+        "format": "Llauna",
+        "preu": 2,
+        "quantitat": 10
       }
     },
     "ticket": {
