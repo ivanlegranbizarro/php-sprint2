@@ -1,3 +1,78 @@
 {
-  "comanda"
+  "comanda": {
+    "client": {
+      "nom": "Pepe",
+      "cognoms": "Glotón Glutamato",
+      "telefon": "456-654-345",
+      "adreça": {
+        "carrer": "De la Moraleja de Raffiki S/N",
+        "localitat": "Liga de los comedores indiscrminados de pizza",
+        "provincia": "Tarragona"
+      }
+    },
+    "productes": {
+      "pizzes": {
+        "pizza": {
+          "_id": 1,
+          "nom": "Margarita",
+          "tamany": "mitja",
+          "ingredients": [
+            "tomàquet",
+            "formatge",
+            "julivert"
+          ],
+          "preu": 10,
+          "quantitat": 1
+        }
+      },
+      "hamburgueses": {
+        "beguda": {
+          "_id": "-",
+          "nom": "-",
+          "format": "-",
+          "preu": 0,
+          "quantitat": 0
+        }
+      },
+      "begudes": {
+        "beguda": {
+          "_id": 1,
+          "nom": "Voll-Damm",
+          "format": "Llauna",
+          "preu": 2,
+          "quantitat": 10
+        }
+      }
+    },
+    "ticket": {
+      "total": 30
+    },
+    "tipus": {
+      "domicili": {
+        "repartidor": {
+          "_id": 1,
+          "nom": "Sonic González"
+        },
+        "adreça": {
+          "carrer": "De la Moraleja de Raffiki S/N",
+          "localitat": "Liga de los comedores indiscrminados de pizza",
+          "provincia": "Tarragona"
+        }
+      },
+      "local": {
+        "botiga": {
+          "empleats": {
+            "empleat": {
+              "_id": "-",
+              "nom": "-"
+            }
+          },
+          "nom": "Botiga Primigènia",
+          "carrer": "De la Pantomima erràtica núm:67",
+          "localitat": "Localitat dels pizzers",
+          "provincia": "Tarragona"
+        }
+      }
+    }
+  }
 }
