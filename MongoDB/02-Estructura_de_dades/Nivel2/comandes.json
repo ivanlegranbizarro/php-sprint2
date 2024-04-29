@@ -1,6 +1,7 @@
 {
   "comanda": {
     "client": {
+      "_id": 1,
       "nom": "Pepe",
       "cognoms": "Glotón Glutamato",
       "telefon": "456-654-345",
@@ -26,7 +27,7 @@
         }
       },
       "hamburgueses": {
-        "beguda": {
+        "hamburguesa": {
           "_id": "-",
           "nom": "-",
           "format": "-",
