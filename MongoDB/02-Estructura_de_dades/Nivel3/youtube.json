@@ -1,0 +1,73 @@
+{
+  "youtube": {
+    "canal": {
+      "nom": "",
+      "decripcio": "",
+      "data": "",
+      "usuari": {
+        "_id": "",
+        "email": "",
+        "nom": "",
+        "data_neixement": "",
+        "sexe": [
+          "home",
+          "dona",
+          "persona_trans",
+          "no_binari"
+        ],
+        "playlists": {
+          "playlist": {
+            "video": {
+              "_id": "",
+              "nom": ""
+            }
+          }
+        }
+      },
+      "video": {
+        "_id": "",
+        "titol": "",
+        "descripcio": "",
+        "tamany": 0,
+        "durada": 0,
+        "thumbnail": "",
+        "nom_arxiu": "",
+        "comentaris": {
+          "comentari": {
+            "usuari": {
+              "_id": "",
+              "nom": "",
+              "data": ""
+            }
+          }
+        },
+        "estat": [
+          "public",
+          "ocult",
+          "privat"
+        ],
+        "reproduccions": 0,
+        "likes": {
+          "like": {
+            "usuari": {
+              "_id": "",
+              "nom": ""
+            },
+            "data": ""
+          },
+          "total": 0
+        },
+        "dislikes": {
+          "dislike": {
+            "usuari": {
+              "_id": "",
+              "nom": ""
+            },
+            "data": ""
+          },
+          "total": 0
+        }
+      }
+    }
+  }
+}
