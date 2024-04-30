@@ -18,7 +18,7 @@ abstract class Jugador
 
     switch ($instruccion) {
       case 'd':
-        if ($this->x < 9) {
+        if ($this->x + $movimiento >= 9) {
           $this->x += $movimiento;
         } else {
           echo "No puedes moverte más a la derecha.\n";
@@ -26,7 +26,7 @@ abstract class Jugador
         break;
 
       case 'i':
-        if ($this->x > 0) {
+        if ($this->x - $movimiento <= 0) {
           $this->x -= $movimiento;
         } else {
           echo "No puedes moverte más a la izquierda.\n";
@@ -34,7 +34,7 @@ abstract class Jugador
         break;
 
       case 'a':
-        if ($this->y < 9) {
+        if ($this->y + $movimiento <= 9) {
           $this->y += $movimiento;
         } else {
           echo "No puedes moverte más hacia arriba.\n";
@@ -42,7 +42,7 @@ abstract class Jugador
         break;
 
       case 'p':
-        if ($this->y > 0) {
+        if ($this->y - $movimiento >= 0) {
           $this->y -= $movimiento;
         } else {
           echo "No puedes moverte más hacia abajo.\n";
