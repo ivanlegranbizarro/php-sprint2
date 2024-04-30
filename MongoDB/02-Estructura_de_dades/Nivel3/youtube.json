@@ -1,71 +1,62 @@
 {
   "youtube": {
     "canal": {
-      "nom": "",
-      "decripcio": "",
-      "data": "",
+      "nom": "Canal de Tutoriales",
+      "descripcio": "Un canal dedicado a tutoriales de tecnología",
+      "data": "2024-04-01",
       "usuari": {
-        "_id": "",
-        "email": "",
-        "nom": "",
-        "data_neixement": "",
-        "sexe": [
-          "home",
-          "dona",
-          "persona_trans",
-          "no_binari"
-        ],
+        "_id": "550e8400-e29b-41d4-a716-446655440000",
+        "email": "juan@example.com",
+        "nom": "Juan Pérez",
+        "data_neixement": "1992-06-15",
+        "sexe": "home",
         "playlists": {
           "playlist": {
             "video": {
-              "_id": "",
-              "nom": ""
+              "_id": "123e4567-e89b-12d3-a456-426614174000",
+              "nom": "Video de Tecnología"
             }
           }
         }
       },
       "video": {
-        "_id": "",
-        "titol": "",
-        "descripcio": "",
-        "tamany": 0,
-        "durada": 0,
-        "thumbnail": "",
-        "nom_arxiu": "",
+        "_id": "123e4567-e89b-12d3-a456-426614174001",
+        "titol": "Cómo configurar una red doméstica",
+        "descripcio": "Tutorial paso a paso para configurar una red en casa.",
+        "tamany": 150,
+        "durada": 720,
+        "thumbnail": "thumbnail123.jpg",
+        "nom_arxiu": "red_domestica.mp4",
         "comentaris": {
           "comentari": {
             "usuari": {
-              "_id": "",
-              "nom": "",
-              "data": ""
+              "_id": "123e4567-e89b-12d3-a456-426614174002",
+              "nom": "Ana López",
+              "data": "2024-04-15 10:30:00"
             }
           }
         },
-        "estat": [
-          "public",
-          "ocult",
-          "privat"
-        ],
-        "reproduccions": 0,
+        "estat": "public",
+        "reproduccions": 1200,
         "likes": {
           "like": {
             "usuari": {
-              "_id": "",
-              "nom": ""
-            },
-            "data": ""
+              "_id": "550e8400-e29b-41d4-a716-446655440001",
+              "nom": "Juan Pérez",
+              "data": "2024-04-10 12:00:00"
+            }
           },
-          "total": 0
+          "total": 150
         },
         "dislikes": {
           "dislike": {
             "usuari": {
-              "_id": "",
-              "nom": ""
-            },
-            "data": ""
+              "_id": "123e4567-e89b-12d3-a456-426614174003",
+              "nom": "Pedro Martínez",
+              "data": "2024-04-12 15:45:00"
+            }
           },
-          "total": 0
+          "total": 10
         }
       }
     }
