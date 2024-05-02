@@ -12,7 +12,6 @@ abstract class Jugador
   }
 
   public function pedirOrden(int $movimiento = 1)
-  //TODO Parametrizar los límites en la función movimiento para que no choquen con la suma de furiaBerseker
   {
     $instruccion = readline("Introduce la dirección hacia la que te quieres mover ('d' para derecha, 'i' para izquierda, 'a' para arriba, 'p' para abajo): ");
 
@@ -79,6 +78,37 @@ class Guerrero extends Jugador
 
 class Mago extends Jugador
 {
+  public function __construct(
+    public string $nickname,
+    public array $hechizos
+  ) {
+  }
+
+  public function teRevientoConMiHechizo(string $hechizo): string
+  {
+    if (in_array($hechizo, $this->hechizos)) {
+      return "Te voy a reventar con $hechizo";
+    }
+    return 'El mago aún no ha aprendido ese hechizo';
+  }
 }
 
+class Arquero extends Jugador
+{
+  public static int $flechas = 100;
+  public function __construct(
+    public string $nickname,
+    public string $arco
+  ) {
+  }
+
+  public function dispararFlecha(): string
+  {
+    if (self::$flechas > 1) {
+      self::$flechas -= 1;
+      return "Te disparo con mi arco $this->arco";
+    }
+    return 'No me quedan flechas para matarte, pérfido';
+  }
+}
 echo $guerrero = new Guerrero('Pepe Hostias', 'Espadón');
