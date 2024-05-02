@@ -53,6 +53,11 @@ abstract class Jugador
         break;
     }
   }
+
+  public function __toString(): string
+  {
+    return "Este jugador se llama $this->nickname";
+  }
 }
 
 
@@ -68,11 +73,6 @@ class Guerrero extends Jugador
   public function furiaBerseker()
   {
     $this->pedirOrden(2);
-  }
-
-  public function __toString(): string
-  {
-    return "Este jugador se llama $this->nickname";
   }
 }
 
