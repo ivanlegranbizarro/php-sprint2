@@ -106,7 +106,7 @@ class Arquero extends Jugador
 
   public function dispararFlecha(): string
   {
-    if (self::$flechas > 1) {
+    if (self::$flechas >= 1) {
       self::$flechas -= 1;
       return "Te disparo con mi arco $this->arco";
     }
