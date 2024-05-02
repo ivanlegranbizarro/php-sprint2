@@ -72,7 +72,7 @@ class Guerrero extends Jugador
 
   public function __toString(): string
   {
-    return "Este guerrero se llama $this->nickname";
+    return "Este jugador se llama $this->nickname";
   }
 }
 
@@ -95,7 +95,9 @@ class Mago extends Jugador
 
 class Arquero extends Jugador
 {
+
   public static int $flechas = 100;
+
   public function __construct(
     public string $nickname,
     public string $arco
@@ -112,3 +114,7 @@ class Arquero extends Jugador
   }
 }
 echo $guerrero = new Guerrero('Pepe Hostias', 'Espadón');
+
+echo $mago = new Mago('El Mágico Topo Giggio', ['¡Te ratonifico', 'Te vas a enterar, bastardo!']);
+
+echo $arquero = new Arquero('Parafino', 'Asaetador Mortífero');
