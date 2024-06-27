@@ -40,6 +40,7 @@
       "data": "2020-04-05T00:00:00Z",
       "preu_total": 162,
       "empleat": {
+        "_id": 1,
         "nom": "Marisa la de la Repisa"
       }
     }
