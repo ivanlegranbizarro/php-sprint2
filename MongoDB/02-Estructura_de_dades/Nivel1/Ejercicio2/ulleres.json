@@ -2,8 +2,12 @@
   "ulleres": {
     "_id": 1,
     "marca": "Ray-Ban",
+    "graduacio_vidre_esquerre": "",
+    "graduacio_vidre_dret": "",
     "tipus_muntura": "pasta",
     "color_muntura": "negro",
+    "color_vidre_esquerre": "",
+    "color_vidre_dret": "",
     "proveidor": {
       "nom": "Proveidor S.A.",
       "adreça": {
